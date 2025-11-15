@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: ranger
+      POSTGRES_PASSWORD: ranger
+      POSTGRES_DB: ranger
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  ranger-admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: ranger
+      DB_PASSWORD: ranger
+      DB_NAME: ranger
+    depends_on:
+      - postgres
+    ports:
+      - "6080:6080"
+    volumes:
+      - ranger-logs:/opt/ranger/ews/logs
+
+volumes:
+  pgdata:
+  ranger-logs:

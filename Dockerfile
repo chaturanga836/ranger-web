@@ -21,6 +21,7 @@ COPY conf/ /opt/ranger/conf/
 COPY cred/ /opt/ranger/cred/
 COPY ews/ /opt/ranger/ews/
 COPY lib/ /opt/ranger/lib/
+COPY db /opt/ranger/db
 
 COPY lib/postgresql-42.7.8.jar /opt/ranger/ews/webapp/WEB-INF/lib/
 

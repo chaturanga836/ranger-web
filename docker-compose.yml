@@ -1,34 +1,21 @@
-version: "3.9"
-
 services:
-  postgres:
-    image: postgres:14
-    environment:
-      POSTGRES_USER: ranger
-      POSTGRES_PASSWORD: ranger
-      POSTGRES_DB: ranger
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
   ranger-admin:
     build:
       context: .
       dockerfile: Dockerfile
     environment:
-      DB_HOST: postgres
+      DB_HOST: ranger-db          # Existing Postgres container
       DB_PORT: 5432
-      DB_USER: ranger
-      DB_PASSWORD: ranger
-      DB_NAME: ranger
+      DB_USER: postgres           # Use the real user of existing DB
+      DB_PASSWORD: your_password  # Replace with real password
+      DB_NAME: ranger             # The database Ranger uses
     depends_on:
-      - postgres
+      - ranger-db                 # Only depends, does NOT create new DB
     ports:
       - "6080:6080"
     volumes:
       - ranger-logs:/opt/ranger/ews/logs
 
+# Named volumes
 volumes:
-  pgdata:
   ranger-logs:

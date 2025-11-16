@@ -8,9 +8,7 @@ services:
       DB_PORT: 5432
       DB_USER: postgres           # Use the real user of existing DB
       DB_PASSWORD: your_password  # Replace with real password
-      DB_NAME: ranger             # The database Ranger uses
-    depends_on:
-      - ranger-db                 # Only depends, does NOT create new DB
+      DB_NAME: ranger             # The database Ranger uses               # Only depends, does NOT create new DB
     ports:
       - "6080:6080"
     volumes:

@@ -5,10 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      DB_HOST: ranger-db          # Existing Postgres container
+      DB_HOST: ec2-65-0-150-75.ap-south-1.compute.amazonaws.com          # Existing Postgres container
       DB_PORT: 5432
       DB_USER: postgres           # Use the real user of existing DB
-      DB_PASSWORD: your_password  # Replace with real password
+      DB_PASSWORD: 2324  # Replace with real password
       DB_NAME: ranger             # The database Ranger uses               # Only depends, does NOT create new DB
     ports:
       - "6080:6080"

@@ -1,5 +1,6 @@
 services:
   ranger-admin:
+    container_name: ranger-admin-web
     build:
       context: .
       dockerfile: Dockerfile

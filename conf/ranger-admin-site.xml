@@ -17,7 +17,7 @@
 	</property>
 	<property>
 		<name>ranger.jpa.jdbc.password</name>
-		<value>_</value>
+		<value>2324</value>
 		<description />
 	</property>
 	<property>

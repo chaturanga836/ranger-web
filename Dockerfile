@@ -17,7 +17,6 @@ RUN apt-get update && \
 COPY conf/ /opt/ranger/conf/
 COPY cred/ /opt/ranger/cred/
 COPY ews/ /opt/ranger/ews/
-COPY lib/ /opt/ranger/lib/
 COPY db/ /opt/ranger/db/
 
 

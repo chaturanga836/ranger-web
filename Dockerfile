@@ -19,6 +19,7 @@ COPY cred/ /opt/ranger/cred/
 COPY ews/ /opt/ranger/ews/
 COPY db/ /opt/ranger/db/
 
+RUN chmod +x /opt/ranger/ews/ranger-admin-services.sh
 
 COPY dba_script.py /opt/ranger/db/dba_script.py
 

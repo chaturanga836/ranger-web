@@ -12,7 +12,8 @@ RUN apt-get update && \
         curl unzip procps && \
     pip3 install --break-system-packages psycopg2-binary && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-
+    
+RUN groupadd -r ranger && useradd -r -g ranger -s /bin/bash ranger
 # Copy Ranger Admin components
 COPY conf/ /opt/ranger/conf/
 COPY cred/ /opt/ranger/cred/

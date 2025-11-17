@@ -20,8 +20,7 @@ COPY ews/ /opt/ranger/ews/
 COPY lib/ /opt/ranger/lib/
 COPY db/ /opt/ranger/db/
 
-# Copy these IMPORTANT files into /opt/ranger/db
-COPY db_setup.py /opt/ranger/db/db_setup.py
+
 COPY dba_script.py /opt/ranger/db/dba_script.py
 
 # PostgreSQL driver

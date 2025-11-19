@@ -102,12 +102,12 @@
 		<value>ldap://ec2-65-0-150-75.ap-south-1.compute.amazonaws.com:1389</value>
 		<description />
 	</property>
-		<property>
+	<property>
 		<name>ranger.ldap.user.dnpattern</name>
 		<value>uid={0},ou=users,dc=example,dc=com</value>
 		<description />
 	</property>
-		<property>
+	<property>
 		<name>ranger.ldap.group.searchbase</name>
 		<value>ou=groups,dc=example,dc=com</value>
 		<description />
@@ -230,7 +230,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.user.searchfilter</name>
-		<value />
+		<value>uid={0}</value>
 		<description />
 	</property>
 	<property>
@@ -238,7 +238,11 @@
 		<value>(sAMAccountName={0})</value>
 		<description />
 	</property>
-	
+	<property>
+		<name>ranger.ldap.user.searchbase</name>
+		<value>ou=users,dc=example,dc=com</value>
+		<description>LDAP search base for users</description>
+	</property>
 	<property>
 		<name>ranger.sso.providerurl</name>
 		<value>https://127.0.0.1:8443/gateway/knoxsso/api/v1/websso</value>
@@ -250,13 +254,13 @@
 	<property>
 		<name>ranger.sso.enabled</name>
 		<value>false</value>
-	</property>	
+	</property>
 	<property>
 		<name>ranger.sso.browser.useragent</name>
 		<value>Mozilla,chrome</value>
 	</property>
-	
-		
+
+
 	<property>
 		<name>ranger.admin.kerberos.token.valid.seconds</name>
 		<value>30</value>
@@ -284,7 +288,7 @@
 	<property>
 		<name>ranger.spnego.kerberos.keytab</name>
 		<value />
-	</property>	
+	</property>
 	<property>
 		<name>ranger.lookup.kerberos.principal</name>
 		<value>rangerlookup/_HOST@REALM</value>
@@ -293,7 +297,7 @@
 		<name>ranger.lookup.kerberos.keytab</name>
 		<value />
 	</property>
-	
+
 	<property>
 		<name>ranger.supportedcomponents</name>
 		<value />
@@ -302,30 +306,30 @@
 		<name>ranger.downloadpolicy.session.log.enabled</name>
 		<value>false</value>
 	</property>
-	
-    <property>
-    	<name>ranger.kms.service.user.hdfs</name>
-        <value>hdfs</value>
-    </property>
-    <property>
-        <name>ranger.kms.service.user.hive</name>
-        <value>hive</value>
-    </property>
-    <property>
-        <name>ranger.kms.service.user.hbase</name>
-        <value>hbase</value>
-    </property>
-    <property>
-        <name>ranger.kms.service.user.om</name>
-        <value>om</value>
-    </property>
 
-    <property>
-        <name>ranger.audit.hive.query.visibility</name>
-        <value>true</value>
-        <description />
-    </property>
-    <property>
+	<property>
+		<name>ranger.kms.service.user.hdfs</name>
+		<value>hdfs</value>
+	</property>
+	<property>
+		<name>ranger.kms.service.user.hive</name>
+		<value>hive</value>
+	</property>
+	<property>
+		<name>ranger.kms.service.user.hbase</name>
+		<value>hbase</value>
+	</property>
+	<property>
+		<name>ranger.kms.service.user.om</name>
+		<value>om</value>
+	</property>
+
+	<property>
+		<name>ranger.audit.hive.query.visibility</name>
+		<value>true</value>
+		<description />
+	</property>
+	<property>
 		<name>ranger.service.https.attrib.keystore.credential.alias</name>
 		<value>keyStoreCredentialAlias</value>
 	</property>
@@ -333,63 +337,63 @@
 		<name>ranger.tomcat.ciphers</name>
 		<value />
 	</property>
-                
-        <property>
-                <name>ranger.audit.solr.collection.name</name>
-                <value>ranger_audits</value>
-        </property>
-        <property>
-                <name>ranger.audit.solr.config.name</name>
-                <value>ranger_audits</value>
-        </property>
-        <property>
-                <name>ranger.audit.solr.configset.location</name>
-                <value />
-        </property>
-        <property>
-                <name>ranger.audit.solr.no.shards</name>
-                <value>1</value>
-        </property>
-        <property>
-                <name>ranger.audit.solr.max.shards.per.node</name>
-                <value>1</value>
-        </property>
-        <property>
-                <name>ranger.audit.solr.no.replica</name>
-                <value>1</value>
-        </property>
-        <property>
-                <name>ranger.audit.solr.acl.user.list.sasl</name>
-                <value>solr,infra-solr</value>
-        </property>
-        <property>
-                <name>ranger.audit.solr.bootstrap.enabled</name>
-                <value>true</value>
-        </property>
-        <property>
-				<name>ranger.audit.solr.max.retry</name>
-				<value />
-				<description>Maximum no. of retry to setup solr</description>
-		</property>
-		<property>
-			<name>ranger.admin.cookie.name</name>
-			<value>RANGERADMINSESSIONID</value>
-		</property>
-		<property>
-			<name>ranger.admin.init.purge.login_records</name>
-			<value>false</value>
-		</property>
-		<property>
-			<name>ranger.admin.init.purge.login_records.retention.days</name>
-			<value>0</value>
-		</property>
-		<property>
-			<name>ranger.admin.init.purge.transaction_records</name>
-			<value>false</value>
-		</property>
-		<property>
-			<name>ranger.admin.init.purge.transaction_records.retention.days
-			</name>
-			<value>0</value>
-		</property>
+
+	<property>
+		<name>ranger.audit.solr.collection.name</name>
+		<value>ranger_audits</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.config.name</name>
+		<value>ranger_audits</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.configset.location</name>
+		<value />
+	</property>
+	<property>
+		<name>ranger.audit.solr.no.shards</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.max.shards.per.node</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.no.replica</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.acl.user.list.sasl</name>
+		<value>solr,infra-solr</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.bootstrap.enabled</name>
+		<value>true</value>
+	</property>
+	<property>
+		<name>ranger.audit.solr.max.retry</name>
+		<value />
+		<description>Maximum no. of retry to setup solr</description>
+	</property>
+	<property>
+		<name>ranger.admin.cookie.name</name>
+		<value>RANGERADMINSESSIONID</value>
+	</property>
+	<property>
+		<name>ranger.admin.init.purge.login_records</name>
+		<value>false</value>
+	</property>
+	<property>
+		<name>ranger.admin.init.purge.login_records.retention.days</name>
+		<value>0</value>
+	</property>
+	<property>
+		<name>ranger.admin.init.purge.transaction_records</name>
+		<value>false</value>
+	</property>
+	<property>
+		<name>ranger.admin.init.purge.transaction_records.retention.days
+		</name>
+		<value>0</value>
+	</property>
 </configuration>

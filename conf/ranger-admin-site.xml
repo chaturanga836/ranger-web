@@ -240,7 +240,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.user.searchbase</name>
-		<value>ou=users,dc=example,dc=com</value>
+		<value>dc=example,dc=com</value>
 		<description>LDAP search base for users</description>
 	</property>
 	<property>

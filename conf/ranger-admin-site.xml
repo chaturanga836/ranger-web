@@ -134,7 +134,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.bind.password</name>
-		<value>_</value>
+		<value>admin123</value>
 		<description>LDAP bind password</description>
 	</property>
 	<property>

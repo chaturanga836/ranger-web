@@ -114,7 +114,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.group.searchfilter</name>
-		<value>(member=uid={0},ou=users,dc=example,dc=com)</value>
+		<value>(objectclass=groupOfNames)</value>
 		<description />
 	</property>
 	<property>

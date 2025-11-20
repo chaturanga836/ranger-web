@@ -102,11 +102,7 @@
 		<value>ldap://ec2-65-0-150-75.ap-south-1.compute.amazonaws.com:1389</value>
 		<description />
 	</property>
-	<property>
-		<name>ranger.ldap.user.dnpattern</name>
-		<value></value>
-		<description />
-	</property>
+
 	<property>
 		<name>ranger.ldap.group.searchbase</name>
 		<value>ou=groups,dc=example,dc=com</value>

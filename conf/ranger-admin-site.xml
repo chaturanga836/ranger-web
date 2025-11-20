@@ -103,11 +103,6 @@
 		<description />
 	</property>
 	<property>
-		<name>ranger.ldap.user.dnpattern</name>
-		<value></value>
-		<description />
-	</property>
-	<property>
 		<name>ranger.ldap.group.searchbase</name>
 		<value>ou=groups,dc=example,dc=com</value>
 		<description />

@@ -104,7 +104,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.user.dnpattern</name>
-		<value>uid={0},ou=users,dc=example,dc=com</value>
+		<value></value>
 		<description />
 	</property>
 	<property>

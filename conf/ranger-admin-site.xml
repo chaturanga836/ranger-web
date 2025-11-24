@@ -104,12 +104,12 @@
 	</property>
 	<property>
 		<name>ranger.ldap.group.searchbase</name>
-		<value>ou=groups,dc=example,dc=com</value>
+		<value></value>
 		<description />
 	</property>
 	<property>
 		<name>ranger.ldap.group.searchfilter</name>
-		<value>(objectclass=groupOfNames)</value>
+		<value></value>
 		<description />
 	</property>
 	<property>
@@ -120,17 +120,14 @@
 	<property>
 		<name>ranger.ldap.base.dn</name>
 		<value>dc=example,dc=com</value>
-		<description>LDAP base dn or search base</description>
 	</property>
 	<property>
 		<name>ranger.ldap.bind.dn</name>
 		<value>cn=admin,dc=example,dc=com</value>
-		<description>LDAP bind dn or manager dn</description>
 	</property>
 	<property>
 		<name>ranger.ldap.bind.password</name>
-		<value>adminpassword</value>
-		<description>LDAP bind password</description>
+		<value>admin123</value>
 	</property>
 	<property>
 		<name>ranger.ldap.default.role</name>
@@ -149,18 +146,16 @@
 	<property>
 		<name>ranger.ldap.ad.url</name>
 		<value />
-		<description>ldap://</description>
 	</property>
 
 	<property>
 		<name>ranger.ldap.ad.base.dn</name>
-		<value>dc=example,dc=com</value>
+		<value></value>
 		<description>AD base dn or search base</description>
 	</property>
 	<property>
 		<name>ranger.ldap.ad.bind.dn</name>
-		<value>cn=administrator,ou=users,dc=example,dc=com</value>
-		<description>AD bind dn or manager dn</description>
+		<value></value>
 	</property>
 	<property>
 		<name>ranger.ldap.ad.bind.password</name>
@@ -230,7 +225,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.ad.user.searchfilter</name>
-		<value>(sAMAccountName={0})</value>
+		<value></value>
 		<description />
 	</property>
 	<property>

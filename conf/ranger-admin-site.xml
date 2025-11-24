@@ -127,7 +127,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.bind.password</name>
-		<value>admin123</value>
+		<value>adminpassword</value>
 	</property>
 	<property>
 		<name>ranger.ldap.default.role</name>
@@ -139,35 +139,10 @@
 		<description>follow or ignore</description>
 	</property>
 	<property>
-		<name>ranger.ldap.ad.domain</name>
-		<value>example.com</value>
-		<description />
-	</property>
-	<property>
-		<name>ranger.ldap.ad.url</name>
-		<value />
+		<name>ranger.ldap.authentication.method</name>
+		<value>search-bind</value>
 	</property>
 
-	<property>
-		<name>ranger.ldap.ad.base.dn</name>
-		<value></value>
-		<description>AD base dn or search base</description>
-	</property>
-	<property>
-		<name>ranger.ldap.ad.bind.dn</name>
-		<value></value>
-	</property>
-	<property>
-		<name>ranger.ldap.ad.bind.password</name>
-		<value />
-		<description>AD bind password</description>
-	</property>
-
-	<property>
-		<name>ranger.ldap.ad.referral</name>
-		<value />
-		<description>follow or ignore</description>
-	</property>
 	<property>
 		<name>ranger.service.https.attrib.ssl.enabled</name>
 		<value>false</value>
@@ -220,17 +195,13 @@
 	</property>
 	<property>
 		<name>ranger.ldap.user.searchfilter</name>
-		<value>(uid={0})</value>
+		<value>uid={0}</value>
 		<description />
 	</property>
-	<property>
-		<name>ranger.ldap.ad.user.searchfilter</name>
-		<value></value>
-		<description />
-	</property>
+
 	<property>
 		<name>ranger.ldap.user.searchbase</name>
-		<value>dc=example,dc=com</value>
+		<value>ou=IT,dc=example,dc=com</value>
 		<description>LDAP search base for users</description>
 	</property>
 	<property>

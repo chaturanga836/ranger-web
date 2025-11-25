@@ -109,8 +109,12 @@
 	</property>
 	<property>
 		<name>ranger.ldap.user.searchfilter</name>
-		<value>(&amp;(uid={0})(objectClass=inetOrgPerson))</value>
+		<value>(uid={0})(objectClass=inetOrgPerson)</value>
 		<description />
+	</property>
+	<property>
+		<name>ranger.ldap.group.searchfilter</name>
+		<value>(objectClass=groupOfNames)</value>
 	</property>
 	<property>
 		<name>ranger.ldap.group.roleattribute</name>

@@ -108,7 +108,7 @@
 		<description />
 	</property>
 	<property>
-		<name>ranger.ldap.group.searchfilter</name>
+		<name>ranger.ldap.user.searchfilter</name>
 		<value>(&amp;(uid={0})(objectClass=inetOrgPerson))</value>
 		<description />
 	</property>

@@ -143,8 +143,14 @@
 	</property>
 	<property>
 		<name>ranger.ldap.authentication.method</name>
-		<value>search-bind</value>
+		<value>bind</value>
 	</property>
+
+	<property>
+		<name>ranger.ldap.user.dnpattern</name>
+		<value>uid={0},ou=IT,dc=example,dc=com</value>
+	</property>
+
 	<property>
 		<name>ranger.ldap.referral</name>
 		<value />

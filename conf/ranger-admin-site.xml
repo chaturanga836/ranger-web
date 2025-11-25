@@ -94,7 +94,7 @@
 	</property>
 	<property>
 		<name>ranger.authentication.method</name>
-		<value>LDAP</value>
+		<value>UNIX,LDAP</value>
 		<description />
 	</property>
 	<property>
@@ -195,7 +195,7 @@
 	</property>
 	<property>
 		<name>ranger.ldap.user.searchfilter</name>
-		<value>uid={0}</value>
+		<value>(uid={0})</value>
 		<description />
 	</property>
 

@@ -77,6 +77,14 @@
       <cleanHistoryOnStart>true</cleanHistoryOnStart>
     </rollingPolicy>
   </appender>
+
+    <!-- Console appender for live debugging -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d [%t] %-5p %C{6} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
   <logger name="xa" additivity="false" level="info">
     <appender-ref ref="xa_log_appender"/>
   </logger>
@@ -112,15 +120,22 @@
     <appender-ref ref="sql_appender"/>
   </logger>
 
+  <!-- Spring Security LDAP debug -->
   <logger name="org.springframework.security.ldap" level="DEBUG" additivity="false">
-    <appender-ref ref="xa_log_appender"/>
-  </logger>
-  <logger name="org.springframework.security.ldap.authentication" level="DEBUG" additivity="false">
-    <appender-ref ref="xa_log_appender"/>
-  </logger>
-  <logger name="org.springframework.security.web" level="DEBUG" additivity="false">
-    <appender-ref ref="xa_log_appender"/>
-  </logger>
+    <appender-ref ref="xa_log_appender"/>
+  </logger>
+  <logger name="org.springframework.security.ldap.authentication" level="DEBUG" additivity="false">
+    <appender-ref ref="xa_log_appender"/>
+  </logger>
+  <logger name="org.springframework.security.web" level="DEBUG" additivity="false">
+    <appender-ref ref="xa_log_appender"/>
+  </logger>
+
+  <!-- Focused DEBUG logging for RangerAuthenticationProvider -->
+  <logger name="org.apache.ranger.security.web.authentication.RangerAuthenticationProvider" level="DEBUG" additivity="false">
+    <appender-ref ref="xa_log_appender"/>
+    <appender-ref ref="CONSOLE"/>
+  </logger>
 
   <root level="warn">
     <appender-ref ref="xa_log_appender"/>
